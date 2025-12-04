@@ -50,7 +50,7 @@ const GradientGenerator: React.FC = () => {
         <div className="space-y-8 p-6 bg-white border border-gray-200 rounded-2xl shadow-sm">
             
             {/* Colors */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Start Color</label>
                     <div className="flex items-center gap-2">
@@ -64,7 +64,7 @@ const GradientGenerator: React.FC = () => {
                             type="text" 
                             value={color1} 
                             onChange={(e) => setColor1(e.target.value)}
-                            className="flex-1 p-2 border border-gray-300 rounded-md font-mono text-sm uppercase"
+                            className="flex-1 min-w-0 p-2 border border-gray-300 rounded-md font-mono text-sm uppercase"
                         />
                     </div>
                 </div>
@@ -81,7 +81,7 @@ const GradientGenerator: React.FC = () => {
                             type="text" 
                             value={color2} 
                             onChange={(e) => setColor2(e.target.value)}
-                            className="flex-1 p-2 border border-gray-300 rounded-md font-mono text-sm uppercase"
+                            className="flex-1 min-w-0 p-2 border border-gray-300 rounded-md font-mono text-sm uppercase"
                         />
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const GradientGenerator: React.FC = () => {
             {/* Direction */}
             <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Direction</label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                     {['to right', 'to left', 'to bottom', 'to top', 'to bottom right', 'to top left'].map((dir) => (
                         <button
                             key={dir}
